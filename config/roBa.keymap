@@ -87,10 +87,10 @@
 
         NUM {
             bindings = <
-&kp LS(NUMBER_1)            &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                              &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp NUBS
-&kp NUMBER_1                &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp N5      &trans      &kp UNDERSCORE  &kp NUMBER_6      &kp N7      &kp N8      &kp N9      &kp TILDE
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1   &kp KP_NUMBER_2   &kp KP_NUMBER_3   &kp PERIOD  &trans      &trans          &kp SEMICOLON     &kp COLON   &trans      &trans      &kp LS(UNDERSCORE)
-&trans                      &trans            &trans            &trans            &trans      &trans      &trans          &trans                                                &kp BSLH
+&kp LS(NUMBER_1)            &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                         &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp AT_SIGN
+&kp NUMBER_1                &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp N5      &trans      &kp TILDE  &kp NUMBER_6      &kp N7      &kp N8      &kp N9      &kp N0
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1   &kp KP_NUMBER_2   &kp KP_NUMBER_3   &kp PERIOD  &trans      &kp NUBS   &kp SEMICOLON     &kp COLON   &trans      &trans      &kp UNDERSCORE
+&trans                      &trans            &trans            &trans            &trans      &trans      &trans     &trans                                                &kp BACKSLASH
             >;
         };
 
