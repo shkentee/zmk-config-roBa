@@ -13,34 +13,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -67,7 +40,7 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R          &kp T                                                       &kp Y        &kp U  &kp I      &kp O    &kp P
+&lt 1 Q         &kp W         &kp E         &kp R          &kp T                                                       &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A           &kp S         &kp D         &kp F          &kp G        &kp LCTRL               &kp PLUS               &kp H        &kp J  &lt 5 K    &kp L    &kp MINUS
 &kp Z           &kp X         &kp C         &kp V          &kp B        &kp LEFT_SHIFT          &kp KP_MULTIPLY        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &kp BACKSPACE  &lt 2 SPACE  &lt 3 INT_MUHENKAN      &lt 2 INTERNATIONAL_4  &lt 3 ENTER                             &kp ESCAPE
@@ -78,10 +51,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
