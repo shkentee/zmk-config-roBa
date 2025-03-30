@@ -67,10 +67,10 @@
 
         NUM {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)     &kp LS(N5)                                     &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LBKT
-&kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4         &kp N5        &trans      &kp RS(EQUAL)        &kp NUMBER_6      &kp N7      &kp N8      &kp N9      &kp N0
-&kp LEFT_SHIFT    &kp EQUAL         &kp LS(INT_YEN)   &kp INTERNATIONAL_6  &kp LS(INT6)  &trans      &kp INT_RO           &kp SEMICOLON     &kp APOS    &trans      &trans      &kp RS(INT_RO)
-&trans            &trans            &trans            &kp DELETE           &trans        &trans      &kp INTERNATIONAL_2  &kp TAB                                               &kp INT3
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)     &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                                      &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LBKT
+&kp NUMBER_1      &kp NUMBER_2         &kp NUMBER_3      &kp NUMBER_4      &kp N5         &trans      &kp RS(EQUAL)        &kp NUMBER_6      &kp N7      &kp N8      &kp N9      &kp N0
+&kp LEFT_SHIFT    &kp INTERNATIONAL_3  &kp LS(INT_YEN)   &kp EQUAL         &kp LS(EQUAL)  &trans      &kp INT_RO           &kp SEMICOLON     &kp APOS    &trans      &trans      &kp RS(INT_RO)
+&trans            &trans               &trans            &kp DELETE        &trans         &trans      &kp INTERNATIONAL_2  &kp TAB                                               &kp INT3
             >;
         };
 
