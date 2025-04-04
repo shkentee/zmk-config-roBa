@@ -41,7 +41,7 @@
             tapping-term-ms = <200>;
         };
     };
-    endpoint_sideband_behaviour {
+    behaviour {
         compatible = "zmk,kscan-sideband-behaviors";
         auto-enable;
         kscan = <&touchkey1>; 
