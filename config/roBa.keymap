@@ -41,6 +41,13 @@
             tapping-term-ms = <200>;
         };
     };
+    endpoint_sideband_behaviour {
+        compatible = "zmk,kscan-sideband-behaviors";
+        auto-enable;
+        kscan = <&touchkey1>; 
+            column = <0>;
+            bindings = <&mo 4>;
+    };
 
     keymap {
         compatible = "zmk,keymap";
