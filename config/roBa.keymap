@@ -40,12 +40,12 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-    };
-    behaviour {
-        compatible = "zmk,kscan-sideband-behaviors";
-        auto-enable;
-        kscan = <&touchkey1>; 
-        bindings = <&mo 4>;
+         tt223tap: tt223tap{
+            compatible = "zmk,kscan-sideband-behaviors";
+            auto-enable;
+            kscan = <&touchkey1>; 
+            bindings = <&mo 4>;
+        };
     };
 
     keymap {
