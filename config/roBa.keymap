@@ -60,8 +60,8 @@
         default_layer {
             bindings = <
 &kp Q             &kp W           &kp E         &kp R          &kp T                                                            &kp Y        &kp U  &kp I      &kp O         &kp P
-&kp A             &kp S           &kp D         &kp F          &kp G        &lt 4 TAB                        &kp PLUS           &kp H        &kp J  &kp K      &lt 4 L       &mt LALT MINUS
-&mt LEFT_SHIFT Z  &kp X           &kp C         &kp V          &kp B        &kp LEFT_GUI                     &lt 6 KP_MULTIPLY  &kp N        &kp M  &kp COMMA  &lt 5 PERIOD  &mt RIGHT_SHIFT SLASH
+&kp A             &kp S           &kp D         &kp F          &kp G        &lt 4 TAB                        &kp PLUS           &kp H        &kp J  &kp K      &lt 5 L       &mt LALT MINUS
+&mt LEFT_SHIFT Z  &kp X           &kp C         &kp V          &kp B        &kp LEFT_GUI                     &lt 6 KP_MULTIPLY  &kp N        &kp M  &kp COMMA  &lt 4 PERIOD  &mt RIGHT_SHIFT SLASH
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_CONTROL LANGUAGE_2      &lt 2 LANGUAGE_1   &lt 3 ENTER                                  &lt 4 ESC
             >;
 
@@ -100,8 +100,8 @@
         MOUSE {
             bindings = <
 &trans          &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
-&trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &none   &trans
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB3  &mo 5   &trans
+&trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &mo 5   &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB3  &none   &trans
 &trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
