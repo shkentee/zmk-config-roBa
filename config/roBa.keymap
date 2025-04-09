@@ -20,6 +20,11 @@
             bindings = <&mo 1>;
             key-positions = <16 28>;
         };
+
+        mouseRightClick {
+            bindings = <&mkp MB2>;
+            key-positions = <20 21>;
+        };
     };
 
     macros {
