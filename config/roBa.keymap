@@ -50,7 +50,7 @@
         touch {
             column = <0>;
             row = <0>;
-            bindings = <&mo 4>;
+            bindings = <&mkp MB1>;
         };
     };
 
