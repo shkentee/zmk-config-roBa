@@ -20,6 +20,11 @@
             bindings = <&mo 1>;
             key-positions = <16 28>;
         };
+
+        holdSpace {
+            bindings = <&kp SPACE>;
+            key-positions = <13 38>;
+        };
     };
 
     macros {
