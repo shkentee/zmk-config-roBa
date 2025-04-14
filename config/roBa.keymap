@@ -16,7 +16,7 @@
     combos {
         compatible = "zmk,combos";
 
-        function_layer {
+        lay1_right {
             bindings = <&mo 1>;
             key-positions = <16 28>;
         };
@@ -24,6 +24,11 @@
         holdSpace {
             bindings = <&kp SPACE>;
             key-positions = <13 38>;
+        };
+
+        lay1_left {
+            bindings = <&mo 1>;
+            key-positions = <15 27>;
         };
     };
 
