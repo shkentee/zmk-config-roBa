@@ -42,3 +42,7 @@ column = <0>;row = <0>;はtouchkey1の1行目1列目の入力を指定という�
 
 以上で完了
 
+/////参照/////
+https://zmk.dev/docs/config/kscan#direct-gpio-driver
+https://zmk.dev/docs/config/kscan#kscan-sideband-behavior-driver
+
