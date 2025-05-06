@@ -1,6 +1,8 @@
 これはroBaのファームウェアを使用するroBaishにzmk標準機能のdeep sleep (バッテリー節約機能)を実装した時のメモです
 
-/////手順/////
+deepsleepは標準でZMKに搭載されている機能で、指定時間入力が無い場合に作動し、bluetoothを切るなどして電力消費を非常に少なくするモード
+
+/////変更手順/////
 手順1
 zmk-config-roBa/config/boards/shields/Test/roBa_R.confおよびroBa_L.confに
 CONFIG_ZMK_SLEEP=y
@@ -32,4 +34,3 @@ zmk-config-roBa/config/boards/shields/Test/roBa.dtsiのkscan0に
 
 /////参照/////
 https://zmk.dev/docs/features/low-power-states
-
