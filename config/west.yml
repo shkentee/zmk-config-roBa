@@ -2,7 +2,7 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: Kenta-sol
+    - name: shkentee
       url-base: https://github.com/shkentee
   projects:
     - name: zmk
