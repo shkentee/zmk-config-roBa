@@ -57,7 +57,7 @@
         };
     };
 
-    tt223tap: tt223tap {
+    ttp224tap: ttp224tap {
         compatible = "zmk,kscan-sideband-behaviors";
         kscan = <&touchkey1>;
         auto-enable;
