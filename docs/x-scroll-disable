@@ -1,0 +1,31 @@
+これは横方向のスクロールを無効化するCONFIGを作った際のメモです
+
+/////前提/////
+zmk-pmw3610-driverを変更する必要があるので自分のアカウントにfork(コピー)しておく必要があります
+
+
+/////目次/////
+手順1 自分のアカウントにforkしたzmk-pmw3610-driverにX方向のスクロールを無効化する記述をする
+手順2 同zmk-pmw3610-driverに手順１の記述をCONFIGで有効化/無効化するための記述をする
+手順3 zmk-pmw3610-driverの参照元を自分のリポジトリに変更する
+手順4 設定した定義を有効化する
+
+/////手順詳細/////
+手順１
+
+
+手順3
+あらかじめ自分のアカウントにforkしたzmk-pmw3610-driverを読み込む記述をする。
+
+デフォルトでkumamuk-gitさんのレポジトリを参照していた記述を下記の通り変更した
+
+まずは読み込むアカウントを下記で指定
+- name: shkentee
+      url-base: https://github.com/shkentee
+
+projectsの下記部分で自分のアカウントにforkしたzmk-pmw3610-driverの"x_scrl_disable"というbranchを読み込む設定に変更
+    - name: zmk-pmw3610-driver
+      remote: shkentee
+      revision: x_scrl_disable
+
+
