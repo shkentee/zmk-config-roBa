@@ -1,0 +1,35 @@
+これはroBaのファームウェアを使用するroBaishにzmk標準機能のdeep sleep (バッテリー節約機能)を実装した時のメモです
+
+/////手順/////
+手順1
+zmk-config-roBa/config/boards/shields/Test/roBa_R.confおよびroBa_L.confに
+CONFIG_ZMK_SLEEP=y
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=900000
+を追加
+deepsleepモードを有効化し、deepsleepが有効化するまでの秒数を900,000ms(15分)とする。
+TIMEOUTの数値は任意で設定可能
+試していないけどタイムアウト秒数は任意指定でデフォが900000になっているので15分にしたい場合はtimeoutの記述は必要ないと思われる
+
+手順2
+zmk-config-roBa/config/boards/shields/Test/roBa.dtsiのkscan0に
+下記のようにwakeup-source;を追加
+スリープから復帰する機能をkscanに付与する。これを忘れると復帰のトリガーが無くなって眠り続けるかエラーになると思われる。試してないですが
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        wakeup-source;
+        diode-direction = "col2row";
+            row-gpios
+                = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+                , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+                , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+                , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 			
+                ;
+    };
+
+以上
+
+/////参照/////
+https://zmk.dev/docs/features/low-power-states
+
