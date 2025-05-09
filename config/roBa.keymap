@@ -132,9 +132,9 @@
 
         ONISHI {
              bindings = <
-&kp Q             &kp L      &kp U         &kp ,          &kp .                                                            &kp F        &kp W  &kp R      &kp Y       &kp P
-&kp E             &kp I      &kp A         &kp O          &kp -        &lt 4 TAB                        &kp KP_PLUS        &kp K        &kp T  &kp N      &lt 5 S     &mt RIGHT_ALT H
-&mt LEFT_SHIFT Z  &kp X      &kp C         &kp V          &kp /        &kp LEFT_GUI                     &lt 6 KP_MULTIPLY  &kp G        &kp D  &kp M  &kp J  &mt RIGHT_SHIFT B
+&kp Q             &kp L      &kp U         &kp COMMA      &kp PERIOD                                                           &kp F        &kp W  &kp R      &kp Y       &kp P
+&kp E             &kp I      &kp A         &kp O          &kp MINUS        &lt 4 TAB                        &kp KP_PLUS        &kp K        &kp T  &kp N      &lt 5 S     &mt RIGHT_ALT H
+&mt LEFT_SHIFT Z  &kp X      &kp C         &kp V          &kp SLASH        &kp LEFT_GUI                     &lt 6 KP_MULTIPLY  &kp G        &kp D  &kp M  &kp J  &mt RIGHT_SHIFT B
 &kp LEFT_SHIFT    &kp LCTRL  &kp LEFT_ALT  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_CONTROL LANGUAGE_2      &lt 2 LANGUAGE_1   &lt 3 ENTER                                &lt 4 ESC
             >;
         };
