@@ -94,10 +94,10 @@
 
         NUM {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                                          &kp LS(NUMBER_6)  &kp LS(N7)         &kp LS(N8)  &kp LS(N9)  &kp LS(NUMBER_0)
-&kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp N5             &trans      &kp RS(EQUAL)        &kp NUMBER_6      &kp N7             &kp N8      &kp N9      &kp N0
-&kp LEFT_SHIFT    &kp GRAVE         &kp LS(GRAVE)     &kp BACKSLASH     &kp LS(BACKSLASH)  &trans      &kp LANGUAGE_1       &kp SEMICOLON     &kp LS(SEMICOLON)  &trans      &trans      &kp EQUAL
-&trans            &trans            &trans            &kp DELETE        &trans             &trans      &kp INTERNATIONAL_2  &kp TAB                                                      &kp INT3
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                                    &kp LS(NUMBER_6)  &kp LS(N7)         &kp LS(N8)  &kp LS(N9)  &kp LS(NUMBER_0)
+&kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp N5             &trans      &kp RS(EQUAL)  &kp NUMBER_6      &kp N7             &kp N8      &kp N9      &kp N0
+&kp LEFT_SHIFT    &kp GRAVE         &kp LS(GRAVE)     &kp BACKSLASH     &kp LS(BACKSLASH)  &trans      &none          &kp SEMICOLON     &kp LS(SEMICOLON)  &trans      &trans      &kp EQUAL
+&trans            &trans            &trans            &kp DELETE        &trans             &trans      &trans         &kp TAB                                                      &kp INT3
             >;
         };
 
