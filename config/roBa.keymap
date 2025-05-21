@@ -130,10 +130,10 @@
             >;
         };
 
-        layer_6 {
+        SYMBOL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp BACKSLASH      &kp APOS      &kp EQUAL      &kp SEMI      &kp GRAVE
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LS(BACKSLASH)  &kp LS(APOS)  &kp LS(EQUAL)  &kp LS(SEMI)  &kp LS(GRAVE)
+&trans  &trans  &trans  &trans  &trans                      &kp LS(BACKSLASH)  &kp LS(APOS)  &kp LS(EQUAL)  &kp LS(SEMI)  &kp LS(GRAVE)
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp BACKSLASH      &kp APOS      &kp EQUAL      &kp SEMI      &kp GRAVE
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans             &trans        &trans         &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                        &trans
             >;
