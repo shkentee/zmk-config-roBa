@@ -132,10 +132,10 @@
 
         SYMBOL {
             bindings = <
-&trans  &trans  &trans         &trans  &trans                      &kp LS(BACKSLASH)  &kp APOS      &kp LS(EQUAL)  &kp SEMI      &kp GRAVE
-&trans  &trans  &kp LA(GRAVE)  &trans  &trans  &trans      &trans  &kp BACKSLASH      &kp LS(APOS)  &kp EQUAL      &kp LS(SEMI)  &kp LS(GRAVE)
-&trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans             &trans        &trans         &trans        &trans
-&trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans                                                        &kp PRINTSCREEN
+&trans  &trans  &trans          &trans  &trans                                &kp LS(BACKSLASH)  &kp APOS      &kp LS(EQUAL)  &kp SEMI      &kp GRAVE
+&trans  &trans  &kp LA(ESCAPE)  &trans  &trans  &trans                &trans  &kp BACKSLASH      &kp LS(APOS)  &kp EQUAL      &kp LS(SEMI)  &kp LS(GRAVE)
+&trans  &trans  &trans          &trans  &trans  &trans                &trans  &trans             &trans        &trans         &trans        &kp PRINTSCREEN
+&trans  &trans  &trans          &trans  &trans  &kp LEFT_CONTROL      &trans  &trans                                                        &none
             >;
         };
     };
