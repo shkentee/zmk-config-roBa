@@ -1,0 +1,56 @@
+これは横方向のスクロールを無効化するCONFIGを作った際のメモです
+
+/////前提/////
+zmk-pmw3610-driverを自分のアカウントにfork(コピー)しておく必要がある
+roBaishのファームウェアはkumamuk-gitさんが作成されたroBa用のファームウェアを使用するが
+pmw3610のドライバーはinorichiさんが作成されたドライバーをforkして読み込む設定になっているため
+zmk-pmw3610-driverを変更する際は自分のアカウントにforkして編集し、roBaファームウェアで定義されている読み込み先を変更する手順が必要
+
+/////目次/////
+手順1 自分のアカウントにforkしたzmk-pmw3610-driverにX方向のスクロールを無効化する記述をする
+手順2 同zmk-pmw3610-driverに手順１の記述をCONFIGで有効化/無効化するための記述をする
+手順3 zmk-pmw3610-driverの参照元を自分のリポジトリに変更する
+手順4 設定した定義を有効化する
+
+/////手順詳細/////
+手順1
+zmk-pmw3610-driverのsrc/pmw3610.cの下記コードの
+前の行に#ifndef CONFIG_PMW3610_SCROLL_X_DISABLEを追加し、後の行に#endifを追加
+X方向(横方向)のスクロールを無効化する定義を記述(今回はx_scrl_disableというbranchで保存したので以後の記述もそうなっている)
+
+   else if (abs(data->scroll_delta_x) > CONFIG_PMW3610_SCROLL_TICK) {
+                input_report_rel(dev, INPUT_REL_HWHEEL,
+                                 data->scroll_delta_x > 0 ? PMW3610_SCROLL_X_NEGATIVE : PMW3610_SCROLL_X_POSITIVE,
+                                 true, K_FOREVER);
+                data->scroll_delta_x = 0;
+                data->scroll_delta_y = 0;
+            }
+
+手順2
+zmk-pmw3610-driverのKconfigで下記を記述し、ビルドした際にCONFIGでon/offできるように定義
+
+config PMW3610_SCROLL_X_DISABLE
+  bool "Disable horizontal scroll (X axis)"
+  default n
+  help
+    Disable horizontal scroll when this option is on.
+
+
+手順3
+zmk-config-roBaのconfig/west.ymlで自分のアカウントにforkしたzmk-pmw3610-driverを読み込む記述
+デフォルトでkumamuk-gitさんのレポジトリを参照していた記述を下記の通り変更する
+
+読み込むアカウントを下記で指定
+- name: shkentee
+      url-base: https://github.com/shkentee
+
+projectsの下記部分で自分のアカウントにforkしたzmk-pmw3610-driverの"x_scrl_disable"というbranchを読み込む設定に変更
+    - name: zmk-pmw3610-driver
+      remote: shkentee
+      revision: x_scrl_disable
+
+手順4
+zmk-config-roBaのconfig/boards/shields/Test/roBa_R.confで下記を記述し、定義した動作を有効化する
+CONFIG_PMW3610_SCROLL_X_DISABLE=y
+
+以上
