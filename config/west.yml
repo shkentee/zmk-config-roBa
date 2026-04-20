@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: cormoran
       url-base: https://github.com/cormoran
+    - name: shkentee
+      url-base: https://github.com/shkentee
     # 既存のリモートはそのまま維持
   projects:
     # ZMK: DYA Studio 用カスタム RPC サブシステム付き cormoran fork
@@ -24,8 +26,9 @@ manifest:
     - name: zmk-module-settings-rpc
       remote: cormoran
       revision: main
+    # shkentee fork with AXIS_SNAP_MODE_DOMINANT (mode=3) for symmetric axis lock
     - name: zmk-module-runtime-input-processor
-      remote: cormoran
-      revision: main
+      remote: shkentee
+      revision: feature/dominant-axis-snap
   self:
     path: config

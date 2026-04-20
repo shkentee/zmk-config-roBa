@@ -34,14 +34,19 @@
     };
 };
 
-/* Scroll axis lock: Y-axis (vertical) dominant, horizontal only unlocks when
- * accumulated cross-axis movement exceeds threshold within timeout window.
- * This prevents accidental diagonal scrolling during vertical scrolling.
+/* Scroll axis lock: symmetric dominant-axis lock.
+ * Whichever axis the user starts moving first gets locked; the cross
+ * axis is suppressed until its accumulated movement exceeds the
+ * threshold within the timeout window, at which point the lock flips
+ * to the newly-dominant axis. After idle time >= timeout, lock is
+ * released so the next motion can pick either axis freely.
+ * This gives symmetric "vertical blocks horizontal during scroll,
+ * horizontal blocks vertical during scroll" behaviour.
  */
 &scroll_runtime_input_processor {
-    axis-snap-mode = <2>;        /* 2 = snap to Y axis (vertical-dominant) */
-    axis-snap-threshold = <30>;  /* cross-axis accum required to unlock */
-    axis-snap-timeout-ms = <500>;/* decay window */
+    axis-snap-mode = <3>;        /* 3 = DOMINANT (dynamic symmetric lock) */
+    axis-snap-threshold = <30>;  /* cross-axis accum required to flip lock */
+    axis-snap-timeout-ms = <500>;/* idle timeout for lock release / decay */
 };
 
 &pinctrl {
