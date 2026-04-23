@@ -51,7 +51,7 @@
 &kp Q             &kp W       &kp E         &kp R          &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A             &kp S       &kp D         &lt 1 F        &mt LEFT_ALT G  &kp TAB                   &kp KP_PLUS            &kp H        &kp J  &kp K      &lt 5 L  &lt 4 MINUS
 &mt LEFT_SHIFT Z  &kp X       &kp C         &kp V          &kp B           &kp LEFT_WIN              &mt LEFT_GUI ASTERISK  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mo 4             &kp ESCAPE  &kp LEFT_ALT  &kp BACKSPACE  &lt 2 SPACE     &mt LCTRL LANGUAGE_2      &lt 2 LANGUAGE_1       &lt 3 ENTER                             &kp ESCAPE
+&mo 4             &kp ESCAPE  &kp LEFT_ALT  &kp BACKSPACE  &lt 2 SPACE     &mt LCTRL LANGUAGE_2      &lt 2 LANGUAGE_1       &lt 3 ENTER                             &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -59,10 +59,10 @@
 
         SYMBOL {
             bindings = <
-&trans  &trans  &trans      &trans  &trans                         &kp LS(SLASH)  &kp LS(SQT)  &kp LS(EQUAL)  &kp LS(SEMI)  &kp LS(GRAVE)
-&trans  &trans  &kp ESCAPE  &trans  &trans  &trans         &trans  &kp SLASH      &kp APOS     &kp EQUAL      &kp SEMI      &kp GRAVE
-&trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans         &trans       &trans         &trans        &kp PRINTSCREEN
-&trans  &trans  &trans      &trans  &trans  &kp LCTRL      &trans  &trans                                                   &none
+&trans  &trans  &trans      &trans  &trans                         &kp LS(SLASH)  &kp SQT       &kp LS(EQUAL)  &kp SEMI      &kp GRAVE
+&trans  &trans  &kp ESCAPE  &trans  &trans  &trans         &trans  &kp SLASH      &kp LS(APOS)  &kp EQUAL      &kp LS(SEMI)  &kp LS(GRAVE)
+&trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans         &trans        &trans         &trans        &kp PRINTSCREEN
+&trans  &trans  &trans      &trans  &trans  &kp LCTRL      &trans  &trans                                                    &none
             >;
         };
 
