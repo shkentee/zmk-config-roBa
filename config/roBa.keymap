@@ -59,10 +59,10 @@
 
         SYMBOL {
             bindings = <
-&trans  &trans  &trans      &trans  &trans                         &kp LS(SLASH)  &kp LS(SQT)  &kp LS(EQUAL)  &kp LS(SEMI)  &kp LS(GRAVE)
-&trans  &trans  &kp ESCAPE  &trans  &trans  &trans         &trans  &kp SLASH      &kp APOS     &kp EQUAL      &kp SEMI      &kp GRAVE
-&trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans         &trans       &trans         &trans        &kp PRINTSCREEN
-&trans  &trans  &trans      &trans  &trans  &kp LCTRL      &trans  &trans                                                   &none
+&trans  &trans  &trans      &trans  &trans                         &kp LS(SLASH)  &kp SQT       &kp LS(EQUAL)  &kp SEMI      &kp GRAVE
+&trans  &trans  &kp ESCAPE  &trans  &trans  &trans         &trans  &kp SLASH      &kp LS(APOS)  &kp EQUAL      &kp LS(SEMI)  &kp LS(GRAVE)
+&trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans         &trans        &trans         &trans        &kp PRINTSCREEN
+&trans  &trans  &trans      &trans  &trans  &kp LCTRL      &trans  &trans                                                    &none
             >;
         };
 
