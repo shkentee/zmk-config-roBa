@@ -2,19 +2,29 @@ manifest:
   remotes:
     - name: cormoran
       url-base: https://github.com/cormoran
+    - name: shkentee
+      url-base: https://github.com/shkentee
     # 既存のリモートはそのまま維持
   projects:
-    # ZMK: DYA Studio 用カスタム RPC サブシステム付き cormoran fork
+    # --------------------------------------------------------------------------
+    # 動く参照(ブランチ)で運用し、ZMK/DYA-Studio の上流更新を取り込む方針。
+    # 2026-05-30 に cormoran が zmk 本体＋各モジュールを v4 へ一斉移行したため、
+    # 旧 v0.3-branch+dya では噛み合わず破綻していた。スタックごと v4 系の
+    # 動くブランチ(zmk=main+dya, モジュール=main)へ移行して追従する。
+    # ※ 上流更新でビルドが割れたら都度修正する運用。
+    # --------------------------------------------------------------------------
+
+    # ZMK: DYA Studio 用カスタム RPC サブシステム付き cormoran fork (v4 系)
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+dya
+      revision: main+dya
       import: app/west.yml
 
     - name: zmk-pmw3610-driver
       remote: cormoran
       revision: main
 
-    # DYA Studio モジュール（すべて cormoran リポジトリ）
+    # DYA Studio モジュール（すべて cormoran リポジトリ, v4 系 main）
     - name: zmk-module-ble-management
       remote: cormoran
       revision: main
@@ -24,8 +34,12 @@ manifest:
     - name: zmk-module-settings-rpc
       remote: cormoran
       revision: main
+
+    # runtime-input-processor: mode=3(DOMINANT 軸ロック)は cormoran 上流に無い
+    # 独自機能。cormoran main(v4) に mode=3 を載せた shkentee fork ブランチを使う。
+    # 上流 v4 更新を取り込みたい時はこのブランチを cormoran main に追従リベースする。
     - name: zmk-module-runtime-input-processor
-      remote: cormoran
-      revision: main
+      remote: shkentee
+      revision: feature/dominant-axis-snap-v4
   self:
     path: config
