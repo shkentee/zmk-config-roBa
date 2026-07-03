@@ -39,9 +39,9 @@ manifest:
 
     # shkentee fork: pre-v4 ベース(dbf92f76) + AXIS_SNAP_MODE_DOMINANT(mode=3)。
     # スクロール軸ロック(斜め抑制/真縦・真横のみ)を提供する。mode=3 は
-    # 「1ジェスチャー1軸ロック(アイドルで解除するまで軸を変えない)」に修正済み(87d6124)。
+    # 「毎レポートで大きい軸だけ通すリアルタイム優勢軸方式(無ヒステリシス)」(877d24b)。
     - name: zmk-module-runtime-input-processor
       remote: shkentee
-      revision: 87d6124e7aa66161da6660ee3e14a220d1608b87  # feature/dominant-axis-snap
+      revision: 877d24b6adac174d91e475e67d42f1304f0eea05  # feature/dominant-axis-snap
   self:
     path: config
