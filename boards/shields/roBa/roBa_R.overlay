@@ -38,7 +38,7 @@
  * mode=3 = DOMINANT: 先に動いた軸へ動的にロックし、クロス軸成分を 0 に抑制する。
  *   閾値を超える強いクロス軸入力があるとロックが相手軸へ切り替わる（縦横対称）。
  *   timeout-ms のアイドルでロック解除し、次の動作で軸を選び直す。
- * ※ mode=3 は shkentee fork (feature/dominant-axis-snap-v4) でのみ有効。
+ * ※ mode=3 は shkentee fork (feature/dominant-axis-snap) でのみ有効。
  */
 &scroll_runtime_input_processor {
     axis-snap-mode = <3>;         /* 3 = DOMINANT（動的・対称の軸ロック） */
@@ -77,7 +77,7 @@
 
     trackball: trackball@0 {
         status = "okay";
-        compatible = "cormoran,pmw3610";
+        compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;

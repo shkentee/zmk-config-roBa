@@ -7,39 +7,40 @@ manifest:
     # 既存のリモートはそのまま維持
   projects:
     # --------------------------------------------------------------------------
-    # 動く参照(ブランチ)で運用し、ZMK/DYA-Studio の上流更新を取り込む方針。
-    # 2026-05-30 に cormoran が zmk 本体＋各モジュールを v4 へ一斉移行したため、
-    # 旧 v0.3-branch+dya では噛み合わず破綻していた。スタックごと v4 系の
-    # 動くブランチ(zmk=main+dya, モジュール=main)へ移行して追従する。
-    # ※ 上流更新でビルドが割れたら都度修正する運用。
+    # 依存はすべて「動くブランチ(main / v0.3-branch+dya)」ではなくコミット SHA で固定。
+    # 2026-05-30 に cormoran が zmk 本体＋各モジュールを一斉に v4 へ移行した結果、
+    # v0.3-branch+dya に固定した本リポジトリでビルドが破綻していた
+    #   - runtime-input-processor: zmk_keymap_layer_activate が 2 引数化(-Wfatal-errors)
+    #   - ble-management: zmk_endpoint_set/get_preferred_transport 未定義参照
+    #   - pmw3610-driver: v4 化でトラックボールデバイス未生成(__device_dts_ord_* 未定義)
+    # そこで最後に緑だった 2026-05-23 のビルド(run 26329926205)が解決した SHA へ全固定する。
     # --------------------------------------------------------------------------
 
-    # ZMK: DYA Studio 用カスタム RPC サブシステム付き cormoran fork (v4 系)
+    # ZMK: DYA Studio 用カスタム RPC サブシステム付き cormoran fork
     - name: zmk
       remote: cormoran
-      revision: main+dya
+      revision: 4493783ef88ce2e653bf8217c92ee17140df71e3  # v0.3-branch+dya (2026-05-04)
       import: app/west.yml
 
     - name: zmk-pmw3610-driver
       remote: cormoran
-      revision: main
+      revision: 274c92bec8a0e98499ceff653b8b9bd6486effbe  # pre-v4 (deep sleep 改善)
 
-    # DYA Studio モジュール（すべて cormoran リポジトリ, v4 系 main）
+    # DYA Studio モジュール（すべて cormoran リポジトリ）
     - name: zmk-module-ble-management
       remote: cormoran
-      revision: main
+      revision: 851661cd21f2aded8ec649da86e01a207dc4b973  # pre-v4 (PR #5 setting_bug)
     - name: zmk-module-battery-history
       remote: cormoran
-      revision: main
+      revision: 307755dd2ad4d320e14de162e8e5ef018f29d929  # 2026-02-24 以降不変
     - name: zmk-module-settings-rpc
       remote: cormoran
-      revision: main
+      revision: ad1c995cf910ca989ecd6352a1d0b41ccb18362c  # 2026-02-11 以降不変
 
-    # runtime-input-processor: mode=3(DOMINANT 軸ロック)は cormoran 上流に無い
-    # 独自機能。cormoran main(v4) に mode=3 を載せた shkentee fork ブランチを使う。
-    # 上流 v4 更新を取り込みたい時はこのブランチを cormoran main に追従リベースする。
+    # shkentee fork: pre-v4 ベース(dbf92f76) + AXIS_SNAP_MODE_DOMINANT(mode=3)。
+    # スクロール軸ロック(斜め抑制/真縦・真横のみ)を提供する。
     - name: zmk-module-runtime-input-processor
       remote: shkentee
-      revision: feature/dominant-axis-snap-v4
+      revision: 88b501e21446003cb9d355b02748523fc959a99c  # feature/dominant-axis-snap
   self:
     path: config
