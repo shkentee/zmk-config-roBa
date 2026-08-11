@@ -47,7 +47,7 @@
         compatible = "zmk,kscan-sideband-behaviors";
         kscan = <&touchkey1>;
         auto-enable;
-    
+
         touch {
             column = <0>;
             row = <0>;
@@ -102,7 +102,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &mo 5     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &mkp MB3  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB3  &mkp MB3  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
