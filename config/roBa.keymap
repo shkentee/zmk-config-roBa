@@ -77,10 +77,10 @@
 
         FX_ARROW {
             bindings = <
-&kp F1          &kp F2  &kp F3  &kp F4   &kp F5                       &kp HOME  &kp PG_UP       &kp UP    &kp LC(PG_UP)      &kp LEFT_BRACKET
-&kp F6          &kp F7  &kp F8  &kp F9   &kp F10  &trans      &trans  &none     &kp LEFT_ARROW  &kp DOWN  &kp RIGHT          &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &none   &none   &kp F11  &kp F12  &trans      &trans  &kp END   &kp PAGE_DOWN   &trans    &kp LC(PAGE_DOWN)  &kp LS(LEFT_BRACKET)
-&trans          &trans  &trans  &kp DEL  &trans   &trans      &trans  &trans                                                 &kp LS(RIGHT_BRACKET)
+&kp F1          &kp F2  &kp F3  &kp F4   &kp F5                       &kp HOME         &kp PG_UP       &kp UP    &kp LC(PG_UP)      &kp LEFT_BRACKET
+&kp F6          &kp F7  &kp F8  &kp F9   &kp F10  &trans      &trans  &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT          &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &none   &none   &kp F11  &kp F12  &trans      &trans  &kp END          &kp PAGE_DOWN   &trans    &kp LC(PAGE_DOWN)  &kp LS(LEFT_BRACKET)
+&trans          &trans  &trans  &kp DEL  &trans   &trans      &trans  &trans                                                        &kp LS(RIGHT_BRACKET)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
